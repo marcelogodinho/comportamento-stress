@@ -5,7 +5,8 @@ import joblib
 model = open("RandomForestStress.pkl", "rb")
 rf=joblib.load(model)
 
-st.title("Propensão Aplicações em Períodos de Stress")
+st.title("Comportamento do Cliente - Stress")
+st.text("Inclua as variáveis do cliente que deseja prever o comportamento:")
  
 segmento_list=['Private','Alta Renda','Varejo']
 suitability_list=['Conservador','Moderado','Arrojado']
@@ -54,7 +55,7 @@ sexo = st.selectbox('Sexo:', sexo_list)
 est_civil = st.selectbox('Estado Civil:', est_civil_list)
 nacionalidade = st.selectbox('Nacionalidade:', nacionalidade_list)
 escolaridade = st.selectbox('Escolaridade:', escolaridade_list)
-investimentos = st.slider(label='Saldo em Aplicações', key='Saldo em Aplicações',value=10.0, min_value=0.0, max_value=1000.0, step=5.0, format="%.1f mil")  * 1000
+investimentos = st.slider(label='Saldo em Aplicações', key='Saldo em Aplicações',value=100000.0, min_value=0.0, max_value=10000000.0, step=10.0, format="%.1f")  
 
 
 st.write("Volume Total Investimentos do Cliente: ", '{:,.0f}'.format(investimentos))
