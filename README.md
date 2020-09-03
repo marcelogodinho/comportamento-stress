@@ -1,1 +1,1 @@
-# test-godz
+# Modelo Preditivo para comportamento de clientes em períodos de stress
